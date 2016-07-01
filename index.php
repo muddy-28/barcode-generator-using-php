@@ -19,6 +19,8 @@ $index=$_GET["index"];
 $code1=$data[$index+1][0];
 $title1=$data[$index+1][1];
 $price1= $data[$index+1][2];
+//$variant1= $data[$index+1][3];
+$variant1= "Green";
 
 
 $code2=$data[$index+2][0];
@@ -63,57 +65,69 @@ $pdf->SetFont('Arial','',6);
 
 
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(9,10);
+$pdf->SetXY(8,10);
 $pdf->Write(0,'Hussain Mall');    
 $pdf->SetFont('Arial','',6);
 $pdf->SetXY(9,15);
 $pdf->Write(0,$title1);
 $pdf->Code128(9,17,$code1,20,10);
-$pdf->SetXY(13,25);
+$pdf->SetXY(9,25);
 $pdf->Write(7,$code1);
-$pdf->SetXY(10,29);
+$pdf->SetXY(9,27);
+$pdf->Write(7,$variant1);
+$pdf->SetXY(9,30.5);
 $pdf->Write(5,$price1.".00 PKR");
 
 //A set
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(38,10);
+$pdf->SetXY(37,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
 $pdf->SetXY(38,15);
 $pdf->Write(0,$title1);
 $pdf->Code128(38,17,$code1,20,10);
-$pdf->SetXY(40,25);
+$pdf->SetXY(38,25);
 $pdf->Write(7,$code1);
-$pdf->SetXY(39,29);
+$pdf->SetXY(38,27);
+$pdf->Write(7,$variant1);
+$pdf->SetXY(38,30.5);
 $pdf->Write(5,$price1.".00 PKR");
 
 
 
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(67,10);
+$pdf->SetXY(66,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
 $pdf->SetXY(66,15);
 $pdf->Write(0,$title1);
 $pdf->Code128(66,17,$code1,20,10);
-$pdf->SetXY(67,25);
+$pdf->SetXY(66,25);
 $pdf->Write(7,$code1);
-$pdf->SetXY(67,29);
+$pdf->SetXY(66,27);
+$pdf->Write(7,$variant1);
+$pdf->SetXY(66,30.5);
 $pdf->Write(5,$price1.".00 PKR");
 
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(93,10);
+$pdf->SetXY(92,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
-$pdf->SetXY(96,15);
+$pdf->SetXY(92,15);
 $pdf->Write(0,$title1);
 $pdf->Code128(93,17,$code1,20,10);
 $pdf->SetXY(95,25);
 $pdf->Write(7,$code1);
-$pdf->SetXY(94,29);
+$pdf->SetXY(94,27);
+$pdf->Write(7,$variant1);
+$pdf->SetXY(94,30.5);
 $pdf->Write(5,$price1.".00 PKR");
+
+
+
+
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(123,10);
+$pdf->SetXY(122,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
 
@@ -128,7 +142,7 @@ $pdf->SetXY(124,29);
 $pdf->Write(5,$price1.".00 PKR");
 
 $pdf->SetFont('Arial','',9);
-$pdf->SetXY(153,10);
+$pdf->SetXY(152,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
 
@@ -136,12 +150,12 @@ $pdf->SetXY(153,15);
 $pdf->Write(0,$title1);
 $pdf->Code128(153,17,$code1,20,10);
 $pdf->SetXY(153,25);
-$pdf->Write(7,$code);
+$pdf->Write(7,$code1);
 $pdf->SetXY(153,29);
 $pdf->Write(5,$price1.".00 PKR");
 
 $pdf->SetFont('Arial','',8);
-$pdf->SetXY(181.5,10);
+$pdf->SetXY(180.5,10);
 $pdf->Write(0,'Hussain Mall');
 $pdf->SetFont('Arial','',6);
 
